@@ -53,6 +53,7 @@ vorpal
         if (i) {
             ncp.copy(`ssh -i ${process.env.C}/${i.key}.pem ${i.os.length > 0 ? i.os[0] : 'ec2-user'}@${i.dns}`,
                 () => {
+                    console.log(`SSH String is now in your clipboard.`)
                     process.exit(0)
                 })
 
